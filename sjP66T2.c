@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-	char ctrl;
+	char ctrl,clear;
 	float h_area=0,h_price=0,h_cash=0,h_rate=0,h_year=0;
 	unsigned int loan_month;
 	float loan_sum,loan_mon_rate;
@@ -11,6 +11,7 @@ int main(){
 	for(;;){
 		printf("\ns-房贷计算\ne-退出程序\n");
 		ctrl=getchar();
+		clear=getchar();
 		if(ctrl=='s')
 		{
 			printf("（1）输入购房面积\n");
@@ -56,4 +57,5 @@ int main(){
 			
 		return 0;
 		}
+
 
