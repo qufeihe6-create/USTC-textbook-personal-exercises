@@ -9,26 +9,26 @@ int main(){
 	float t;
 	int i;
 	for(;;){
-		printf("\ns-·¿´û¼ÆËã\ne-ÍË³ö³ÌĞò\n");
+		printf("\ns-æˆ¿è´·è®¡ç®—\ne-é€€å‡ºç¨‹åº\n");
 		ctrl=getchar();
 		if(ctrl=='s')
 		{
-			printf("£¨1£©ÊäÈë¹º·¿Ãæ»ı\n");
+			printf("ï¼ˆ1ï¼‰è¾“å…¥è´­æˆ¿é¢ç§¯\n");
 			scanf("%f",&h_area);
-			printf("£¨2£©ÊäÈë¹º·¿µ¥¼Û\n");
+			printf("ï¼ˆ2ï¼‰è¾“å…¥è´­æˆ¿å•ä»·\n");
 			scanf("%f",&h_price);
-			printf("£¨3£©ÊäÈë¹º·¿Ê×¸¶±ÈÀı(x)%%\n");
+			printf("ï¼ˆ3ï¼‰è¾“å…¥è´­æˆ¿é¦–ä»˜æ¯”ä¾‹(x)%%\n");
 			scanf("%f",&h_cash);
-			printf("£¨4£©ÊäÈë´û¿îÀûÂÊ(x)%%\n");
+			printf("ï¼ˆ4ï¼‰è¾“å…¥è´·æ¬¾åˆ©ç‡(x)%%\n");
 			scanf("%f",&h_rate);
-			printf("£¨5£©ÊäÈë´û¿îÄêÏŞ\n");
+			printf("ï¼ˆ5ï¼‰è¾“å…¥è´·æ¬¾å¹´é™\n");
 			scanf("%f",&h_year);
-			printf("£¨6£©ÊäÈë´û¿î°´½Ò·½Ê½£º0-µÈ¶î±¾Ï¢£¬1-µÈ¶î±¾½ğ\n");
+			printf("ï¼ˆ6ï¼‰è¾“å…¥è´·æ¬¾æŒ‰æ­æ–¹å¼ï¼š0-ç­‰é¢æœ¬æ¯ï¼Œ1-ç­‰é¢æœ¬é‡‘\n");
 			scanf("%d",&h_type);
 			loan_mon_rate=h_rate/100./12;
 			loan_month=h_year*12;
 			loan_sum=h_area*h_price*((float)1-0.01*h_cash);
-			printf("´û¿î×Ü¶îÎª£º%.2f\n",loan_sum); 
+			printf("è´·æ¬¾æ€»é¢ä¸ºï¼š%.2f\n",loan_sum); 
 			pay_sum=0.0;
 			if(h_type==0){
 				t=1.0;
@@ -36,23 +36,24 @@ int main(){
 				t*=(1+loan_mon_rate);
 				mon_pay=loan_sum*loan_mon_rate*t/(t-1);
 				pay_sum=mon_pay*loan_month;
-				printf("µÈ¶î±¾Ï¢°´½Ò·½Ê½Ã¿ÔÂ»¹¿î½ğ¶îÎª£º£¤%.2f\n",mon_pay);
-				printf("µÈ¶î±¾Ï¢°´½Ò·½Ê½×Ü»¹¿î½ğ¶îÎª£º£¤%.2f\n",pay_sum);
+				printf("ç­‰é¢æœ¬æ¯æŒ‰æ­æ–¹å¼æ¯æœˆè¿˜æ¬¾é‡‘é¢ä¸ºï¼šï¿¥%.2f\n",mon_pay);
+				printf("ç­‰é¢æœ¬æ¯æŒ‰æ­æ–¹å¼æ€»è¿˜æ¬¾é‡‘é¢ä¸ºï¼šï¿¥%.2f\n",pay_sum);
 			}
 			else if(h_type==1){
-				printf("µÈ¶î±¾½ğ°´½Ò·½Ê½Ã¿ÔÂ»¹¿î½ğ¶îÁĞ±í£º\n");
+				printf("ç­‰é¢æœ¬é‡‘æŒ‰æ­æ–¹å¼æ¯æœˆè¿˜æ¬¾é‡‘é¢åˆ—è¡¨ï¼š\n");
 				for(i=0;i<loan_month;i++){
 					mon_pay=loan_sum/(float)loan_month+(loan_sum-pay_sum)*loan_mon_rate;
 					pay_sum+=mon_pay;
-					printf("µÚ%d¸öÔÂ»¹¿î½ğ¶î£º%.2f\n",i+1,mon_pay);
+					printf("ç¬¬%dä¸ªæœˆè¿˜æ¬¾é‡‘é¢ï¼š%.2f\n",i+1,mon_pay);
 				}
-				printf("µÈ¶î±¾½ğ°´½Ò·½Ê½×Ü»¹¿î½ğ¶îÎª£º%.2f\n",pay_sum);
+				printf("ç­‰é¢æœ¬é‡‘æŒ‰æ­æ–¹å¼æ€»è¿˜æ¬¾é‡‘é¢ä¸ºï¼š%.2f\n",pay_sum);
 			}
 		}
-		else if(ctrl=="e")
+		else if(ctrl=='e')
 	    break;
 		}
 			
 			
 		return 0;
 		}
+
